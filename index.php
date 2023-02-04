@@ -13,11 +13,11 @@
 		<form>
 			<div class="form">				
 				<div class="form-area">
-					<label for="nome">Nome</label>
+					<label for="nome">Nome<span>*</span></label>
 					<input type="text" name="nome" id="nome" class="form-control" required>
 				</div>
 				<div class="form-area">
-					<label for="sobrenome">Sobrenome</label>
+					<label for="sobrenome">Sobrenome<span>*</span></label>
 					<input type="text" name="sobrenome" id="sobrenome" class="form-control" required>
 				</div>
 			</div>

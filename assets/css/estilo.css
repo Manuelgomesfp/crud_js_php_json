@@ -35,6 +35,9 @@ form div.form-btn {
 	align-items: center;
 	justify-content: center;
 }
+span {
+	color: #f00;
+}
 button {
 	display: flex;
 	border: 1px solid #ccc;
