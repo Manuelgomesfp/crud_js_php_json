@@ -10,7 +10,7 @@
 
 	<section>
 		<h1>Formulário de Cadastramento</h1>
-		<form>
+		<form method="post" action="assets/js/acao.php" class="form_dados">
 			<div class="form">				
 				<div class="form-area">
 					<label for="nome">Nome<span>*</span></label>
@@ -23,7 +23,7 @@
 			</div>
 			<div class="form-btn">
 				<input type="hidden" name="usuario" id="usuario">
-				<button type="submit" class="btn-enviar">Adicionar</button>
+				<button type="submit" class="btn-enviar" id="btn-enviar">Adicionar</button>
 				<button type="reset" class="btn-limpar">Cancelar</button>
 			</div>
 		</form>
