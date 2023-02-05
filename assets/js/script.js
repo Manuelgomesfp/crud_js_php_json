@@ -95,3 +95,33 @@ const btn_cancelar = document.getElementById('btn-cancelar');
 btn_cancelar.addEventListener('click', function () {
 	restaurarForm();
 });
+
+// Pesquisar
+// function pesquisar(pesquisa = 'Manuel') {
+function pesquisar() {
+	let arrays = ["nome", "manuel", "sobrenome", "Pedro"];
+	// p = arrays.append("nome");
+	console.log(p);
+	// console.log(pesquisa);
+	
+}
+
+pesquisa = document.querySelector('.pesquisa');
+pesquisa.oninput = function () {
+	var tabela = document.getElementById('dados');
+	var linhas = tabela.getElementsByTagName('tr');
+
+	pesquisa = this.value.toLowerCase();
+	for (let i = 0; i < linhas.length; i++) {
+		const id = linhas[i].getElementsByTagName('th')[0].textContent.toLowerCase();
+		const nome = linhas[i].getElementsByTagName('td')[0].textContent.toLowerCase();
+		const sobrenome = linhas[i].getElementsByTagName('td')[1].textContent.toLowerCase();
+
+		if (id.includes(pesquisa) || nome.includes(pesquisa) || sobrenome.includes(pesquisa)) {
+			linhas[i].style.display = "";
+		}
+		else {
+			linhas[i].style.display = "none";
+		}
+	}
+}

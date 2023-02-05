@@ -97,5 +97,8 @@
 			echo "Erro";
 		}
 	}
+	else {
+		echo "Erro";
+	}
 
 ?>

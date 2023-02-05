@@ -67,6 +67,17 @@ button {
 .btn-editar:hover {
 	background: #2164ff;
 }
+
+.form-busca {
+	display: flex;
+	justify-content: center;
+	width: 80%;
+}
+.form-busca form {
+	display: block ruby;
+	align-items: center;
+}
+
 .tabela {
 	display: flex;
 	justify-content: center;

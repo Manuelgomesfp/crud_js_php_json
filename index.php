@@ -30,6 +30,12 @@
 	</section>
 	<section>
 		<h1>Tabela de Registros</h1>
+		<div class="form-busca">
+			<form>
+				<input type="search" name="pesquisa" class="form-control pesquisa" placeholder="Pesquisa por Nome ou Sobrenome" required>
+				<button type="button" class="btn-pesquisar">Pesquisar</button>
+			</form>
+		</div>
 		<div class="tabela">
 			<table>
 				<thead>
