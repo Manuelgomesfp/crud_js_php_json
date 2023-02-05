@@ -55,16 +55,43 @@
 			// Verificar se o Indice Existe
 			if (!array_key_exists($indice, $array['dados'])) {
 				echo "Erro";
+				return;
 			}
+			// Actualizar
 			$array = array_replace($array['dados'], array($indice => $actualizar_dados));
+			// Recriar o Array Principal
 			$array = ["dados" => $array];
 			$obj = json_encode($array);
 			echo file_put_contents($nomeArquivoJSON, $obj);
-			echo "sucesso";
 		}
 		// Eliminar
 		elseif ($_GET['acao'] == 'eliminar') {
-			echo "Eliminar";
+			if (!isset($_GET['usuario'])) {
+				echo "erro";
+				return;
+			}
+			$indice = $_GET['usuario'];
+			// Abre o Arquvio no Modo r (para leitura)
+			$arquivo = fopen ($nomeArquivoJSON, 'r');
+			$linhaJSON = "";
+			while(!feof($arquivo)) {
+				//Mostra uma linha do arquivo
+				$linha = fgets($arquivo, 1024);
+				$linhaJSON .= "$linha";
+			}
+			// Converter Dados JSON em ARRAY
+			$array = json_decode($linhaJSON, true);
+
+			// Verificar se o Indice Existe
+			if (!array_key_exists($indice, $array['dados'])) {
+				echo "Erro";
+				return;
+			}
+			// Eliminar o Indice
+			array_splice($array['dados'], $indice, 1);
+			// Salvar
+			$obj = json_encode($array);
+			echo file_put_contents($nomeArquivoJSON, $obj);
 		}
 		else {
 			echo "Erro";
