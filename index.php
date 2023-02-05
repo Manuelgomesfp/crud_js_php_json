@@ -9,8 +9,8 @@
 <body>
 
 	<section>
-		<h1>Formulário de Cadastramento</h1>
-		<form method="post" action="assets/js/acao.php" class="form_dados">
+		<h1 id="titulo">Formulário de Cadastramento</h1>
+		<form method="post" action="assets/js/acao.php?acao=adicionar" id="form_dados" class="form_dados">
 			<div class="form">				
 				<div class="form-area">
 					<label for="nome">Nome<span>*</span></label>
@@ -24,7 +24,7 @@
 			<div class="form-btn">
 				<input type="hidden" name="usuario" id="usuario">
 				<button type="submit" class="btn-enviar" id="btn-enviar">Adicionar</button>
-				<button type="reset" class="btn-limpar">Cancelar</button>
+				<button type="reset" class="btn-limpar" id="btn-cancelar">Cancelar</button>
 			</div>
 		</form>
 	</section>
@@ -34,22 +34,13 @@
 			<table>
 				<thead>
 					<tr>
-						<th>#</th>
+						<th id="btn-editar">#</th>
 						<th>Nome</th>
 						<th>Sobrenome</th>
 						<th></th>
 					</tr>
 				</thead>
-				<tbody>
-					<tr>
-						<th>1</th>
-						<td>Manuel</td>
-						<td>Pedro</td>
-						<td class="tabela-control">
-							<button type="button" class="btn-editar">Editar</button>
-							<button type="button" class="btn-eliminar">Eliminar</button>
-						</td>
-					</tr>
+				<tbody id="dados">
 				</tbody>
 			</table>
 		</div>
