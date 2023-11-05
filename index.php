@@ -33,6 +33,7 @@
 		<div class="form-busca">
 			<form>
 				<input type="search" name="pesquisa" class="form-control pesquisa" placeholder="Pesquisa por Nome ou Sobrenome" required>
+				<button type="button" class="btn-pesquisar" disabled style="background: #666; color: #fff;">Pesquisar</button>
 			</form>
 		</div>
 		<div class="tabela">
@@ -50,6 +51,10 @@
 			</table>
 		</div>
 	</section>
+
+	<footer>
+		<span>Desenvolvido por: Manuel Pedro</span>
+	</footer>
 
 	<script type="text/javascript" src="assets/js/script.js"></script>
 </body>

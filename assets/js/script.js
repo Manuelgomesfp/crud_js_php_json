@@ -96,16 +96,6 @@ btn_cancelar.addEventListener('click', function () {
 	restaurarForm();
 });
 
-// Pesquisar
-// function pesquisar(pesquisa = 'Manuel') {
-function pesquisar() {
-	let arrays = ["nome", "manuel", "sobrenome", "Pedro"];
-	// p = arrays.append("nome");
-	console.log(p);
-	// console.log(pesquisa);
-	
-}
-
 pesquisa = document.querySelector('.pesquisa');
 pesquisa.oninput = function () {
 	var tabela = document.getElementById('dados');
@@ -117,7 +107,9 @@ pesquisa.oninput = function () {
 		const nome = linhas[i].getElementsByTagName('td')[0].textContent.toLowerCase();
 		const sobrenome = linhas[i].getElementsByTagName('td')[1].textContent.toLowerCase();
 
-		if (id.includes(pesquisa) || nome.includes(pesquisa) || sobrenome.includes(pesquisa)) {
+		const nome_commpleto = nome +" "+ sobrenome;
+
+		if (id.includes(pesquisa) || nome.includes(pesquisa) || sobrenome.includes(pesquisa) || nome_commpleto.includes(pesquisa)) {
 			linhas[i].style.display = "";
 		}
 		else {

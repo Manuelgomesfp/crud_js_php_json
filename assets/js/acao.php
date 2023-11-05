@@ -100,5 +100,28 @@
 	else {
 		echo "Erro";
 	}
-
+	/*
+	for ($i=0; $i < 100; $i++) { 
+		// Recuperar os Dados do Formulário e Atribuir em um "Array"
+		$novo_dados = [
+			"nome" => "Manuel T ". $i,
+			"sobrenome" => "Pedro T ". $i, 
+		];
+		// Abre o Arquvio no Modo r (para leitura)
+		$arquivo = fopen ($nomeArquivoJSON, 'r');
+		$linhaJSON = "";
+		while(!feof($arquivo)) {
+			//Mostra uma linha do arquivo
+			$linha = fgets($arquivo, 1024);
+			$linhaJSON .= "$linha";
+		}
+		// Converter Dados JSON em ARRAY
+		$array = json_decode($linhaJSON, true);
+		// Adicionar Nova Linha
+		$array['dados'][] = $novo_dados;
+		// Converter ARRAY em OBJECTO
+		$obj = json_encode($array);
+		// Salvar em aquivo JSON
+		echo file_put_contents($nomeArquivoJSON, $obj);
+	}*/
 ?>
